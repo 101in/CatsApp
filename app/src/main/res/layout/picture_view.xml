@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    <FrameLayout
+            android:id="@+id/picture_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/image_bottom_bar_height" />
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/image_bottom_bar_height"
+                android:layout_gravity="bottom">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/picture_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:padding="6dp"
+                    app:srcCompat="@drawable/ic_unfavorite_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/picture_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="6dp"
+                    app:srcCompat="@drawable/ic_image_download_24dp" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+            android:id="@+id/picture_loading_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:visibility="gone">
+
+        <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/picture_loading_progress_bar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        <LinearLayout
+                android:id="@+id/picture_loading_error_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:srcCompat="@drawable/ic_broken_image_24dp" />
+
+            <TextView
+                    style="@style/TextAppearance.AppCompat.ConnectionErrorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_picture_loading" />
+
+            <Button
+                    android:id="@+id/picture_loading_reload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/error_picture_reload" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

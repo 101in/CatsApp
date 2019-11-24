@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gallery_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+        <FrameLayout
+                android:id="@+id/gallery_progress_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                    android:id="@+id/gallery_loading_progress_bar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"/>
+
+            <LinearLayout
+                    android:id="@+id/gallery_loading_error_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@drawable/ic_connection_error_48dp" />
+
+                <TextView
+                        style="@style/TextAppearance.AppCompat.ConnectionErrorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/error_connection_text" />
+
+                <Button
+                        android:id="@+id/gallery_loading_reload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/error_connection_reload"
+                        />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+    </FrameLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

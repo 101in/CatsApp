@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CatsApp</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_gallery">Галерея</string>
+    <string name="title_favourites">Избранные</string>
+
+    <string name="error_connection_text">Ошибка соединения</string>
+    <string name="error_connection_reload">Повторить</string>
+
+    <string name="error_picture_loading">Ошибка загрузки</string>
+    <string name="error_picture_reload">Повторить</string>
+
+    <string name="error_pictures_partial_loading">Ошибка загрузки изображений. Повторить?</string>
+
+    <string name="empty_favourite_text">У вас нет изрбранных фотографий</string>
+
+    <string name="download_dialog_loading_text">Загружено %1$d%%</string>
+    <string name="download_dialog_success_text">Файл успешно загружен</string>
+    <string name="download_dialog_error_text">Ошибка загрузки файла. Попробуйте ещё раз.</string>
+
+    <string name="download_dialog_permission_denied_text">Для загрузки файлов необходимо предоставить разрешение</string>
+    <string name="download_dialog_permission_rationale_text">Для загрузки файлов необходимо предоставить разрешение в настройках</string>
+    <string name="download_dialog_permission_positive_button">Настройки</string>
+</resources>

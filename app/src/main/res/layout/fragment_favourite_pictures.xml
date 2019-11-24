@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+            android:id="@+id/empty_favourite_pictures"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:srcCompat="@drawable/ic_favorite_grey_24dp"/>
+
+        <TextView
+                style="@style/EmptyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_favourite_text"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favourite_pictures"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+</FrameLayout>

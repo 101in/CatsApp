@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/error_partial_loading_view_height">
+
+    <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/partial_loading_progress_bar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    <TextView
+            android:id="@+id/partial_loading_error_text"
+            style="@style/PartialErrorLoadingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:text="@string/error_pictures_partial_loading" />
+
+</FrameLayout>
